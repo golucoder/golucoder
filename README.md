@@ -1,6 +1,3 @@
-# golucoder
-qweft.com
+Gopal Resume
 
-This is my personal website.
-
-Please Upload Resume 16-03-2016
+Updated 19-03-2016. First time update though git web and though the help of prose.io.
