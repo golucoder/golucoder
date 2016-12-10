@@ -1198,34 +1198,38 @@ inter disciplinary review, onsite-offshore model meetings, guiding & managing a 
             <div class="contact-form">
               <strong>Send me a message</strong>
 
-              <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1Td--etKq7ExOXcwnGyPo5FkmujpIG8huJtEBFWYbatw/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
+              <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdgVTmKDrLE_EipWs1W1ScK1nohWMW_aESx43OxyCxWAnYURQ/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
                 
-		<div class="form-group">
+				<div class="form-group">
                   <label for="InputName1">Name</label>
-                  <input type="text" name="entry.2723649" class="form-control" id="entry.2723649" required="">
+                  <input type="text" name="entry.2007474762" class="form-control" id="entry.2723649" required="">
                 </div>
-
                 <div class="form-group">
                   <label for="InputEmail1">Email</label>
-                  <input type="email" name="entry.2747712" class="form-control" id="entry.2747712" required="">
+                  <input type="email" name="entry.1068780861" class="form-control" id="entry.2747712" required="">
                 </div>
-
                 <div class="form-group">
                   <label for="InputSubject">Subject</label>
-                  <input type="text" name="entry.2131760458" class="form-control" id="entry.2131760458">
+                  <input type="text" name="entry.566115889" class="form-control" id="entry.2131760458">
                 </div>
-
                 <div class="form-group">
                   <label for="InputTextarea">Message</label>
-                  <textarea name="entry.766698622" class="form-control" id="entry.766698622" rows="5" required=""></textarea>
+                  <textarea name="entry.506309488" class="form-control" id="entry.766698622" rows="5" required=""></textarea>
                 </div>
-
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(true) {}"></iframe>
                 <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
               </form>
-
-
+			
+			<!-- This form submits visitors IP address -->
+			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeRUyjv6ZV3Qkdv2_7OBnCQUDYc8jR3G2IHWMW5E498Q4OFNg/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
+				<div class="form-group">                 
+                  <input type="hidden" name="entry.1055573669" class="form-control" id="ip_id" required="">
+                </div>
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(true) {}"></iframe>
+				<button type="submit" id="submit_ip" name="submit_ip" class="btn btn-primary" style="display: none;">Send Message</button>
+			</form>
+			<!-- This form submits visitors IP address -->
+			
             </div><!-- /.contact-form -->
           </div><!-- /.col-md-6 -->
 
@@ -1313,6 +1317,20 @@ inter disciplinary review, onsite-offshore model meetings, guiding & managing a 
 
   <!-- Google Form Submisstion & woking Script -->
 
-
+  <!-- IP track code -->
+	<script type="text/javascript">
+$.get("http://ipinfo.io", function(response) {
+    console.log(response.ip);
+	$("#ip_id").val(response.ip).change();	
+	var button = document.getElementById('submit_ip');	
+	setTimeout(function() {		
+		button.click();
+		/*var ip = $("#ip_id").val();	
+		alert(ip);*/
+	}, 2000);
+}, "jsonp");
+	</script>
+  <!-- IP track code -->
+  
 </body>
 </html>
