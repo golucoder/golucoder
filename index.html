@@ -1317,20 +1317,32 @@ inter disciplinary review, onsite-offshore model meetings, guiding & managing a 
 
   <!-- Google Form Submisstion & woking Script -->
 
-  <!-- IP track code -->
-	<script type="text/javascript">
-$.get("http://ipinfo.io", function(response) {
-    console.log(response.ip);
-	$("#ip_id").val(response.ip).change();	
-	var button = document.getElementById('submit_ip');	
-	setTimeout(function() {		
-		button.click();
-		/*var ip = $("#ip_id").val();	
-		alert(ip);*/
-	}, 2000);
-}, "jsonp");
-	</script>
-  <!-- IP track code -->
+<!-- IP track code -->
+<script type="text/javascript">
+	$.get("http://ipinfo.io", function(response) {
+		console.log(response.ip);
+		$("#ip_id").val(response.ip).change();	
+		var button = document.getElementById('submit_ip');	
+		setTimeout(function() {		
+			button.click();
+			/*var ip = $("#ip_id").val();	
+			alert(ip);*/
+		}, 2000);
+	}, "jsonp");
+</script>
+<!-- IP track code -->
   
+<!-- Google Analytics -->  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88756452-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Google Analytics -->  
+
 </body>
 </html>
